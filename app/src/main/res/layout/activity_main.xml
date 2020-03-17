@@ -18,6 +18,24 @@
             android:hint="전화번호 입력"/>
 
         <Button
+            android:id="@+id/webLinkBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="네이버로 이동하기"/>
+
+        <Button
+            android:id="@+id/playStoreBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="앱 광고 링크"/>
+
+        <Button
+            android:id="@+id/googleMapBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="구글 지도 띄워보기"/>
+
+        <Button
             android:id="@+id/dialBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

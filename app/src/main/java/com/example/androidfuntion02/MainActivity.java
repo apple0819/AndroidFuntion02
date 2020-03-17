@@ -56,7 +56,15 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
                 intent.putExtra("sms_body", "공유 메세지 내용");
                 startActivity(intent);
+            }
+        });
 
+        binding.webLinkBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https:www.naver.com");// 방문할 인터넷 주소
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
             }
         });
     }
