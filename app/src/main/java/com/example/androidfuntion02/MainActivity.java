@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.example.androidfuntion02.databinding.ActivityMainBinding;
@@ -27,7 +28,11 @@ public class MainActivity extends AppCompatActivity {
 //                 => 전화 걸기 화면
 
 //                어느 화면으로 갈지 => 안드로이드가 요구하는 양식으로 작성 : Uri
-                Uri uri = Uri.parse("tel:01051123237");
+                String pN = binding.inputPN.getText().toString();
+//                Log.d("입력한폰번", pN);
+                String phoneUriStr = String.format("tel:%s",pN);
+//                Uri uri = Uri.parse("tel:0"+Integer.parseInt(pN));
+                Uri uri = Uri.parse(phoneUriStr);
                 Intent intent = new Intent(Intent.ACTION_DIAL, uri);
                 startActivity(intent);
             }
